@@ -3,8 +3,8 @@
 	<groupId>com.wicresoft.happygo</groupId>
 	<version>1.0-SNAPSHOT</version>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>WebTest</artifactId>
-	<packaging>war</packaging>
+	<artifactId>AopTest</artifactId>
+	<packaging>jar</packaging>
 	<name>WebTest</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -30,11 +30,7 @@
 
 
 	</dependencies>
-	<scm>
-		<connection>scm:svn:https://172.17.0.24:8888/svn/happygo/03_Src/WebTest/trunk</connection>
-		<developerConnection>scm:svn:https://172.17.0.24:8888/svn/happygo/03_Src/WebTest/trunk</developerConnection>
-		<url>https://172.17.0.24:8888/svn/happygo/03_Src/WebTest/trunk</url>
-	</scm>
+
 	<build>
 		<sourceDirectory>src\main\java</sourceDirectory>
 		<scriptSourceDirectory>src\main\resources</scriptSourceDirectory>
@@ -153,36 +149,7 @@
 				</configuration>
 			</plugin>
 
-			<plugin>
-				<groupId>org.jboss.as.plugins</groupId>
-				<artifactId>jboss-as-maven-plugin</artifactId>
-				<version>7.1.1.Final</version>
-				<configuration>
-					<force>true</force>
-					<hostname>172.17.1.149</hostname>
-					<port>9999</port>
-					<username>jblweb</username>
-					<password>j123456</password>
-				</configuration>
-			</plugin>
-
 		</plugins>
-		<finalName>WebTest</finalName>
+		<finalName>AopTest</finalName>
 	</build>
-
-	<distributionManagement>
-		<repository>
-			<id>nexus-releases</id>
-			<url>
-				http://172.17.0.24:6001/nexus/content/repositories/releases/
-			</url>
-		</repository>
-		<snapshotRepository>
-			<id>nexus-snapshot</id>
-			<url>
-				http://172.17.0.24:6001/nexus/content/repositories/snapshots/
-			</url>
-		</snapshotRepository>
-	</distributionManagement>
-
 </project>
